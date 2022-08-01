@@ -7,7 +7,7 @@ const image_display: Router = express();
 const resizedImagePath: string = path.resolve('./') + '/images/resizedImage';
 const originImagePath: string = path.resolve('./') + '/images';
 // the image name from the images dir
-const images: string = 'creed';
+const images = 'creed';
 
 // set up the get object
 image_display.get(
