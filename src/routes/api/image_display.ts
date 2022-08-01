@@ -23,11 +23,16 @@ image_display.get(
         .send(`something went wrong ! try to check if the image name is exist,
          there is only one image {creed.jpg} `);
     }
-    if (height <= 0 || width <= 0 || !height || !width
-      || isNaN(width) || isNaN(height)) {
+    if (
+      height <= 0 ||
+      width <= 0 ||
+      !height ||
+      !width ||
+      isNaN(width) ||
+      isNaN(height)
+    ) {
       return res.status(400).send('Error: unvalid width or height');
     }
-    
 
     try {
       // parameters to get  the cached image
