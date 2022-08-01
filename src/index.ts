@@ -1,4 +1,4 @@
-import express from 'express';
+import express,{request,response,} from 'express';
 import routes from './routes/index';
 const app = express();
 
@@ -8,7 +8,7 @@ const port = 8080;
 // api middleware
 app.use('/api', routes);
 
-app.get('/', (req, res) => {
+app.get('/', (req:express.Request, res:express.Response) => {
   res.send('server ON');
 });
 // listen to the server response
