@@ -13,6 +13,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "express-validator": "^6.14.2",
+    "fs": "^0.0.1-security",
     "fs-extra": "^10.1.0",
     "gitignore": "^0.7.0",
     "jasmine": "^4.3.0",
