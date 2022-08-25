@@ -38,12 +38,13 @@ image_display.get(
 
     try {
      
-      // resizing the image with the image_resizer module
+
+      if(!fs.existsSync(resizedImagePath+"/"+imageName+"_"+width+"_"+height+".jpg")){
+              // resizing the image with the image_resizer module
       await image_sizing(imageName, width, height);
       // save and serve the image as cashed into the resized images file
       const resizedImage = `${resizedImagePath}/${imageName}_${width}_${height}.jpg`;
       // adding the image to resized image file and view it in the browser
-      if(fs.existsSync(resizedImagePath)){
         res.sendFile(resizedImage);
       }
       
